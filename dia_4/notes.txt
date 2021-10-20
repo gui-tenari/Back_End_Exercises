@@ -1,0 +1,25 @@
+### Manipulando dados de uma tabela
+
+Uso de aspas
+
+* **Crase (``)** - quando se refere a colunas e tabelas e/ou há espaços no nome
+* **Aspas simples (' ')** - *preferivel* às aspas duplas, e se refere a valores do tipo string
+
+> INSERINDO VALORES
+>
+> * INSERT INTO -> pode ser usado com o **ingore** para ignorar possíveis erros de inserção
+>
+> `INSERT INTO nome_da_tabela (coluna1, coluna2) VALUES
+> ('valor_1','valor_2'),
+> ('valor_3','valor_4'),
+> ('valor_5','valor_6');`
+
+> ATUALIZANDO VALORES 
+>
+> * UPDATE -> atualiza um ou mais dados da tabela
+> WHERE com chaves primarias ou uniques 
+>
+> `UPDATE nome_da_tabela
+> SET propriedade_a_ser_alterada = 'novo valor para coluna'
+> WHERE alguma_condicao; -- importantíssimo aplicar o WHERE para não alterar a tabela inteira!`
+> ** Atualização condicional
