@@ -7,8 +7,7 @@ Existem duas maneiras de "armazenar" queries
 
 > **Stored Procedure** -
 >
-> * Pode ter parâmetro de entrada e de saída
-> * Sintaxe:
+> * Pode ter parâmetro de entrada e de saída;
 >
 > ###  Criando:
 >
@@ -18,7 +17,7 @@ Existem duas maneiras de "armazenar" queries
 > ​	Parâmetro de Saída:  
 > ​			`CREATE PROCEDURE DescretiveName( OUT variável DOUBLE)`
 > ​			`BEGIN SELECT name FROM tabela INTO variável` 
-> ​	Parâmetro de Entrada e Saída: *Deve ser criada uma variavél antes, e utiliza-la como paremetro.*
+> ​	Parâmetro de Entrada e Saída: *Deve ser criada uma variável antes, e utiliza-lá como parâmetro.*
 > ​			 `CREATE PROCEDURE DescretiveName ( INOUT variável VARCHAR(200))`
 >
 > ​	`BEGIN`

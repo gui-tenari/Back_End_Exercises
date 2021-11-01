@@ -1,0 +1,26 @@
+# Transformando ideias em um modelo de banco de dados
+
+**Clonando tabelas**
+	Sintaxe:
+
+```
+CREATE TABLE nome_para_nova_tabela LIKE tabela_a_ser_clonada;
+
+-- Exemplo:
+CREATE TABLE actor_clone LIKE sakila.actor`
+```
+
+**Criando uma VIEW** - Tabela temporaria
+
+​	Sintaxe: 
+​		`CREATE VIEW nome_da_view AS query;` - Criando
+​		`SELECT * FROM nome_da_view;` - Consultando
+
+**INDEX**
+
+* PRIMARY KEY
+* UNIQUE
+* INDEX
+  `CREATE INDEX nome_do_index ON tabela(coluna)`
+* FULLTEXT INDEX
+
