@@ -1,0 +1,47 @@
+### Database Design - Como modelar um banco de dados
+
+* Entidades: representações em banco de dados de algo real;
+* Atributos: são características utilizadas para descrever uma entidade;
+* Relacionamentos: como uma entidade se relaciona com a outra
+
+## RELACIONAMENTOS
+
+* **1..N** - um livro tem uma categoria, mas uma categoria pode ter vários livros
+
+* **N..N** - um ator pode estar em vários filmes, e um filme pode ter vários atores
+
+  *DICA: para entender o relacionamento usa a formula:*
+  *`EntidadeA` + verbo + `EntidadeB` .*
+
+### **Tipos de dados**
+
+* Booleano = True || False
+* Caracteres 
+  * Tamanho fixo: até uma quantidade de caracteres aceita, e sempre ocupa todo espaço reservado.
+    CHAR(5) - aceita até 5 caracteres e sempre tera .length = 5
+  * Tamanho variável: até uma quantidade de caracteres aceita, e se adapta ao espaço.
+    VARCHAR(10) - aceita até 10 caracteres e sempre tera .length variável.
+* Números: 
+  * TinyInt: valores pequenos ou  negativos
+  * Unsigned: só valores positivos
+  * Signed: valores positivos e negativos 
+  * Decimal(5, 2): (quantos numeros, quantas casas decimais)
+  * Float: 1 casa decimal
+  * Double: 2 casas decimais 
+* Tempo:
+  * Date - data completa
+  * Time - hora
+  * Year - ano
+  * TimeStamp = fuso horário
+
+#### CRIANDO TABELA
+
+`CREATE DATA BASE IF NOT EXISTS NOME_DO_BANCO;`
+`CREATE TABLE Nome_da_Tabela(`
+	`coluna_id INT PRIMARY KEY AUTO_INCREMENT,`
+	`coluna_2 VARCHAR(50) NOT NULL,`
+	`coluna_FK INT NOT NULL,`
+	`FOREIGN KEY (coluna_FK) REFERENCES table2(Coluna_Id))`
+
+* TABELA PIVÔ - com duas Foreign Keys.
+  `CONSTRAINT PRIMARY KEY (coluna_id1, coluna_id2)`

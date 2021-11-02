@@ -1,0 +1,54 @@
+#### Stored Routines & Stored Functions
+
+Existem duas maneiras de "armazenar" queries
+
+* Stored procedure;
+* Stored function.
+
+> **Stored Procedure** -
+>
+> * Pode ter parâmetro de entrada e de saída;
+>
+> ###  Criando:
+>
+> ​	`DELIMITER $$;`
+> ​	Parâmetro de entrada: 
+> ​			`CREATE PROCEDURE DescretiveName( IN variável NUMERIC )` 
+> ​	Parâmetro de Saída:  
+> ​			`CREATE PROCEDURE DescretiveName( OUT variável DOUBLE)`
+> ​			`BEGIN SELECT name FROM tabela INTO variável` 
+> ​	Parâmetro de Entrada e Saída: *Deve ser criada uma variável antes, e utiliza-lá como parâmetro.*
+> ​			 `CREATE PROCEDURE DescretiveName ( INOUT variável VARCHAR(200))`
+>
+> ​	`BEGIN`
+> ​	`SELECT name FROM tabela1`
+> ​	`END $$`
+> ​	`DELIMITER ;`
+>
+> ### Chamando: 
+>
+> ​	`CALL DescretiveName()` 
+> ​	`CALL DescretiveName(valor)`
+> ​	`CALL DescretiveName(@variavel)` -> esta variável pode ser utilizada em outros lugares da Query
+>
+> 
+
+#### DICAS
+
+* Nomenclatura das funções e Procedures:*
+
+  `-- Verbo + Resultado
+  ex:
+  ObterTotalDeVendas
+  ExibirRankMaximo`
+
+* *Declaração de variáveis*
+
+  `SET @VAR = 'Variável'`
+
+* Tipos de Parametro
+  - VARCHAR(50) -> texto até 50 caracteres
+  - INT -> Valor inteiro numerico
+  - NUMERIC -> Valor numérico
+  - DOUBLE -> Duas Casas decimais
+* 
