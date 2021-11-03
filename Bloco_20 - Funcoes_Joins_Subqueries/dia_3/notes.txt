@@ -5,7 +5,7 @@ Existem duas maneiras de "armazenar" queries
 * Stored procedure;
 * Stored function.
 
-> **Stored Procedure** -
+> ## **Stored Procedure** -
 >
 > * Pode ter parâmetro de entrada e de saída;
 >
@@ -30,8 +30,22 @@ Existem duas maneiras de "armazenar" queries
 > ​	`CALL DescretiveName()` 
 > ​	`CALL DescretiveName(valor)`
 > ​	`CALL DescretiveName(@variavel)` -> esta variável pode ser utilizada em outros lugares da Query
->
-> 
+
+​		>**Stored Functions** -
+
+```sql
+USE banco_de_dados; -- obrigatório para criar a função no banco correto
+DELIMITER $$
+
+CREATE FUNCTION nome_da_function(parametro1, parametro2, ..., parametroN)
+RETURNS tipo_de_dado tipo_de_retorno
+BEGIN
+    query_sql
+    RETURN resultado_a_ser_retornado;
+END $$
+
+DELIMITER ;
+```
 
 #### DICAS
 
@@ -51,4 +65,4 @@ Existem duas maneiras de "armazenar" queries
   - INT -> Valor inteiro numerico
   - NUMERIC -> Valor numérico
   - DOUBLE -> Duas Casas decimais
-* 
+*  
