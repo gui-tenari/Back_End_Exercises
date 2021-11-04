@@ -23,3 +23,10 @@ Uso de aspas
 > SET propriedade_a_ser_alterada = 'novo valor para coluna'
 > WHERE alguma_condicao; -- importantíssimo aplicar o WHERE para não alterar a tabela inteira!`
 > ** Atualização condicional
+
+> DELETANDO VALORES
+>
+> * DELETE -> deleta um ou mais dados da tabela
+>
+> `DELETE FROM banco_de_dados.tabela
+> WHERE coluna = 'valor';`
