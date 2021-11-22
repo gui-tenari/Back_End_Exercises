@@ -82,7 +82,7 @@
   **$unset** -> remove o campo
 
   ```
-  * { $unset: { receita: '''' } }
+  * { $unset: { receita: '' } }
   ```
 
   
