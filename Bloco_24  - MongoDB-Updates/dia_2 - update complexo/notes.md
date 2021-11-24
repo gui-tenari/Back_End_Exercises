@@ -1,4 +1,4 @@
-# Updates complexos - Arrays
+# Updates complexos  (Arrays) - pt.1 
 
 ## **Operadores**
 
@@ -61,7 +61,7 @@
           name: { $in: ["pens", "envelopes"] },
   ```
 
-* **$addToSet** -> garante que nao há valores duplicados em um array (*conjunto*).
+* **$addToSet** -> garante que nao há valores duplicados em um  (*conjunto*).
 
   Ex: 
 
