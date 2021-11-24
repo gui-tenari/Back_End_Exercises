@@ -8,6 +8,7 @@ CREATE TABLE noticia(
 -- Adicionar uma nova coluna
 ALTER TABLE noticia ADD COLUMN data_postagem date NOT NULL;
 
+
 -- Modificar o tipo e propriedades de uma coluna
 ALTER TABLE noticia MODIFY noticia_id BIGINT;
 
